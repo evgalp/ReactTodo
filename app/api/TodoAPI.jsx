@@ -31,8 +31,21 @@ module.exports = {
 		});
 
 		// filter by searchText
+		filteredTodos = filteredTodos.filter((todo) => {
+			var text = todo.text.toLowerCase();
+			return text.includes(searchText);
+		});
 
 		// sort todos with non-completed first
+		filteredTodos.sort((a, b) => {
+			if (a.completed === false && b.completed === true) {
+				return -1;
+			} else if (a.completed === true && b.completed === false) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
 
 		return filteredTodos;
 	}
