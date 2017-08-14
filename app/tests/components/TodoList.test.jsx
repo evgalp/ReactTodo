@@ -7,8 +7,7 @@ var $ = require('jquery');
 
 import {configure} from 'configureStore';
 import ConnectedTodoList, {TodoList} from 'TodoList';
-import ConnectedTodo, {Todo} from 'Todo';
-
+import ConnectedTodo, {Todo} from 'Todo'
 
 describe('TodoList', () => {
   it('should exist', () => {

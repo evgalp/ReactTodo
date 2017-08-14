@@ -11,7 +11,7 @@ describe('Todo', () => {
     expect(Todo).toExist();
   });
 
-  it('should dispatch TOGGLE_TODO on click', () => {
+  it('should dispatch TOGGLE_TODO action on click', () => {
     var todoData = {
       id: 199,
       text: 'Write todo.test.jsx test',
